@@ -26,6 +26,22 @@ It celebrates the festival of Janmashtami with beautiful design, animations, dev
 
 ---
 
+## 👨‍💻 Author
+**Piyush Soni**  
+💻 Web Developer  
+
+---
+
+## 📌 About Project
+This project was created to celebrate Krishna Janmashtami through web design and frontend development.  
+It focuses on festive aesthetics, smooth UI, and interactive web experiences.
+
+---
+
+⭐ If you like this project, don't forget to star the repository!
+
+---
+
 ## ⚙️ How It Works
 - Displays a Krishna Janmashtami themed interface  
 - Uses animations and effects for engaging visuals  
