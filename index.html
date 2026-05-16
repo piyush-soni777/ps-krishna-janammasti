@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shri Krishna Janmashtami | Divine Celebration</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;700&family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Color Palette */
+            --primary: #2c3e50;
+            --secondary: #f39c12;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #1a252f;
+            --text: #2d3436;
+            
+            /* Typography */
+            --heading-font: 'Playfair Display', serif;
+            --body-font: 'Poppins', sans-serif;
+            --devanagari-font: 'Noto Sans Devanagari', sans-serif;
+            
+            /* Spacing */
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 2rem;
+            --space-lg: 3rem;
+            --space-xl: 4rem;
+            
+            /* Borders */
+            --border-radius: 0.5rem;
+            --border-radius-lg: 1rem;
+            
+            /* Shadows */
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 8px rgba(0,0,0,0.15);
+            --shadow-lg: 0 8px 16px rgba(0,0,0,0.2);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        
+        body {
+            font-family: var(--body-font);
+            color: var(--text);
+            line-height: 1.6;
+            background-color: var(--light);
+            overflow-x: hidden;
+        }
+        
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-family: var(--heading-font);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: var(--space-sm);
+        }
+        
+        h1 { font-size: 3rem; }
+        h2 { font-size: 2.5rem; }
+        h3 { font-size: 1.8rem; }
+        h4 { font-size: 1.4rem; }
+        
+        .dev-font {
+            font-family: var(--devanagari-font);
+        }
+        
+        /* Layout Utilities */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+        
+        .section {
+            padding: var(--space-xl) 0;
+            position: relative;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: var(--space-lg);
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: var(--secondary);
+            margin: var(--space-sm) auto;
+            border-radius: 2px;
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: var(--space-xs) var(--space-md);
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            cursor: pointer;
+        }
+        
+        .btn-primary {
+            background-color: var(--secondary);
+            color: var(--dark);
+        }
+        
+        .btn-primary:hover {
+            background-color: transparent;
+            border-color: var(--secondary);
+            color: var(--secondary);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            border-color: var(--light);
+            color: var(--light);
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--light);
+            color: var(--primary);
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            color: var(--light);
+            padding: var(--space-md) 0;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: var(--devanagari-font);
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-decoration: none;
+            color: var(--light);
+        }
+        
+        .logo span {
+            color: var(--secondary);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: var(--space-md);
+        }
+        
+        nav a {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        
+        nav a:hover {
+            color: var(--secondary);
+        }
+        
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--secondary);
+            transition: width 0.3s ease;
+        }
+        
+        nav a:hover::after {
+            width: 100%;
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), ;
+                overflow: hidden;
+                position: relative;        
+            color: var(--light);
+            text-align: center;
+        }
+        
+        .hero-video{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: var(--space-sm);
+            animation: fadeInDown 1s ease;
+        }
+        
+        .hero .dev-font {
+            font-size: 1.5rem;
+            margin-bottom: var(--space-lg);
+            animation: fadeInDown 1s ease 0.2s forwards;
+            opacity: 0;
+        }
+        
+        .hero-actions {
+            display: flex;
+            gap: var(--space-md);
+            justify-content: center;
+            animation: fadeInUp 1s ease 0.4s forwards;
+            opacity: 0;
+        }
+        
+        /* About Section */
+        .about {
+            background-color: var(--light);
+        }
+        
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-lg);
+            align-items: center;
+        }
+        
+        .about-image {
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            height: 100%;
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        .about-content {
+            padding: var(--space-md);
+        }
+        
+        /* Traditions Section */
+        .traditions {
+            background-color: var(--light);
+        }
+        
+        .tradition-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-md);
+        }
+        
+        .tradition-card {
+            background-color: white;
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .tradition-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .tradition-icon {
+            height: 80px;
+            width: 80px;
+            background-color: var(--secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: var(--space-md) auto;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        
+        .tradition-content {
+            padding: var(--space-md);
+            text-align: center;
+        }
+        
+        /* Gallery Section */
+        .gallery {
+            background-color: var(--light);
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: var(--space-sm);
+        }
+        
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--border-radius);
+            height: 250px;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: white;
+            padding: var(--space-md);
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+        
+        /* Countdown Section */
+        .countdown {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            color: var(--light);
+            text-align: center;
+        }
+        
+        .countdown-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: var(--space-md);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .countdown-item {
+            background-color: rgba(255,255,255,0.1);
+            padding: var(--space-md);
+            border-radius: var(--border-radius);
+            backdrop-filter: blur(5px);
+        }
+        
+        .countdown-number {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: var(--space-xs);
+        }
+        
+        /* Temples Section */
+        .temples {
+            background-color: var(--light);
+        }
+        
+        .temple-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-lg);
+            align-items: center;
+        }
+        
+        .temple-info {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-md);
+        }
+        
+        .temple-card {
+            background-color: white;
+            padding: var(--space-md);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.3s ease;
+        }
+        
+        .temple-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: var(--light);
+            padding: var(--space-xl) 0 var(--space-md);
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-lg);
+        }
+        
+        .footer-logo {
+            font-family: var(--devanagari-font);
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: var(--space-sm);
+        }
+        
+        .footer-links h4 {
+            margin-bottom: var(--space-sm);
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: var(--space-xs);
+        }
+        
+        .footer-links a {
+            color: var(--light);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary);
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: var(--space-xl);
+            padding-top: var(--space-md);
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+        
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .about-container,
+            .temple-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-image {
+                height: 400px;
+            }
+            
+            .temple-image {
+                order: -1;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 2rem; }
+            
+            .hero h1 {
+                font-size: 3rem;
+            }
+            
+            .header-container {
+                flex-direction: column;
+                gap: var(--space-sm);
+            }
+            
+            nav ul {
+                gap: var(--space-sm);
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .section {
+                padding: var(--space-lg) 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">श्री<span>कृष्ण</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#traditions">Traditions</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#temples">Temples</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div>
+                 <video loop autoplay muted plays-inline class="hero-video">
+                    <source src="hero-video.mp4" type="video/mp4">
+                </video>
+            <div class="hero-content">
+                <h1 style="color: #eeeeff; text-shadow: 2px 2px 8px rgba(0, 0, 5, 0.9);">Krishna Janmashtami</h1>
+                <p class="dev-font" style="color: #ff0000; text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);">भगवान श्रीकृष्ण का दिव्य अवतरण
+                    <br><span style="color: #e74c3c; font-weight: 100px; font-size: 17px;">made by piyush</span>
+                </p>
+                <div class="hero-actions">
+                    <a href="#about" class="btn btn-primary">Explore</a>
+                    <a href="#countdown" class="btn btn-secondary">Countdown</a>
+                </div>
+                
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title">The Divine Birth</h2>
+            <div class="about-container">
+                <div class="about-image">
+                    <img src="1.png" alt="Ancient painting depicting Krishna's birth in Mathura prison with divine light and celestial beings present">
+                </div>
+                <div class="about-content">
+                    <h3>Celebrating the Eighth Avatar</h3>
+                    <p>Krishna Janmashtami marks the birth of Lord Krishna, the eighth incarnation of Lord Vishnu. Born in the prison of Mathura to Devaki and Vasudeva at midnight on the eighth day (Ashtami) of the Krishna Paksha in the month of Bhadrapada.</p>
+                    <p>The divine infant was miraculously transported across the raging Yamuna river to Gokul, where he was raised by Yashoda and Nanda. This festival symbolizes the triumph of righteousness over wickedness and divine intervention in the mortal realm.</p>
+                    <a href="#" class="btn btn-primary" style="margin-top: var(--space-sm);">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Traditions Section -->
+    <section id="traditions" class="section traditions">
+        <div class="container">
+            <h2 class="section-title">Sacred Traditions</h2>
+            <div class="tradition-cards">
+                <div class="tradition-card">
+                    <div class="tradition-icon">1</div>
+                    <div class="tradition-content">
+                        <h3>Midnight Pooja</h3>
+                        <p>Devotees fast until midnight, the exact moment of Krishna's birth, when special prayers and offerings are made to welcome the divine incarnation.</p>
+                    </div>
+                </div>
+                <div class="tradition-card">
+                    <div class="tradition-icon">2</div>
+                    <div class="tradition-content">
+                        <h3>Dahi Handi</h3>
+                        <p>Teams form human pyramids to break clay pots filled with curd, reenacting Krishna's playful butter-thief legends with the gopis of Vrindavan.</p>
+                    </div>
+                </div>
+                <div class="tradition-card">
+                    <div class="tradition-icon">3</div>
+                    <div class="tradition-content">
+                        <h3>Jhulanotsav</h3>
+                        <p>Decorated swings cradle idols of Radha-Krishna as devotees take turns gently rocking them while singing devotional songs and bhajans.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section gallery">
+        <div class="container">
+            <h2 class="section-title">Divine Moments</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="2.png" alt="Krishna playing flute surrounded by cows and peacocks in Vrindavan's forests">
+                    <div class="gallery-overlay">
+                        <h4>Divine Flute</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="3.png" alt="Young Krishna stealing butter while Yashoda playfully chases him with a stick">
+                    <div class="gallery-overlay">
+                        <h4>Makhan Chor</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="4.png" alt="Krishna lifting Govardhan mountain to protect villagers from Indra's wrath">
+                    <div class="gallery-overlay">
+                        <h4>Govardhan Parvat</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="5.png" alt="Krishna revealing his universal form to Arjuna on Kurukshetra battlefield">
+                    <div class="gallery-overlay">
+                        <h4>Vishwaroop</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="6.png" alt="Radha and Krishna standing by Yamuna river at sunset in eternal love">
+                    <div class="gallery-overlay">
+                        <h4>Radha-Krishna</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="7.png" alt="Krishna dancing on multi-headed serpent Kaliya in Yamuna river">
+                    <div class="gallery-overlay">
+                        <h4>Kaliya Mardan</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Countdown Section -->
+    <section id="countdown" class="section countdown">
+        <div class="container">
+            <h2 class="section-title" style="color: var(--light);">Janmashtami Countdown</h2>
+            <p style="margin-bottom: var(--space-lg); font-size: 1.2rem;">August 16, 2024</p>
+            <div class="countdown-grid">
+                <div class="countdown-item">
+                    <div class="countdown-number" id="days">00</div>
+                    <div>Days</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="hours">00</div>
+                    <div>Hours</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="minutes">00</div>
+                    <div>Minutes</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="seconds">00</div>
+                    <div>Seconds</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Temples Section -->
+    <section id="temples" class="section temples">
+        <div class="container">
+            <h2 class="section-title">Sacred Temples</h2>
+            <div class="temple-container">
+                <div class="temple-info">
+                    <div class="temple-card">
+                        <h3>Banke Bihari Temple, Vrindavan</h3>
+                        <p>The most sacred shrine dedicated to Krishna in his youthful form, known for its unique darshan timings and ecstatic devotional atmosphere.</p>
+                    </div>
+                    <div class="temple-card">
+                        <h3>Dwarkadhish Temple, Dwarka</h3>
+                        <p>The legendary kingdom where Krishna established his rule after leaving Mathura, featuring ancient architecture and spiritual significance.</p>
+                    </div>
+                    <div class="temple-card">
+                        <h3>ISKCON Temples Worldwide</h3>
+                        <p>The International Society for Krishna Consciousness operates hundreds of temples globally celebrating Janmashtami with grand festivities.</p>
+                    </div>
+                </div>
+                <div class="about-image temple-image">
+                    <img src="8.png" alt="Golden shrine of Banke Bihari Temple in Vrindavan with devotees gathering for worship">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="section">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <div class="footer-logo">श्रीकृष्ण</div>
+                    <p>Celebrating the divine avatar of Lord Krishna, who descended to establish dharma and spread the message of love and devotion.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About Janmashtami</a></li>
+                        <li><a href="#traditions">Traditions</a></li>
+                        <li><a href="#gallery">Divine Moments</a></li>
+                        <li><a href="#temples">Sacred Temples</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Bhagavad Gita</a></li>
+                        <li><a href="#">Krishna Bhajans</a></li>
+                        <li><a href="#">Festival Recipes</a></li>
+                        <li><a href="#">Puja Vidhi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="https://www.linkedin.com/in/piyush-soni777">LinkDin</a></li>
+                        <li><a href="https://instagram.com/piyush_soni777">Instagram</a></li>
+                        <li><a href="mailto:piyushsoni4292462@gmail.com">Email Us</a></li>
+                        <li>made by piyush soni</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 Krishna Janmashtami Celebration. All Rights Reserved.
+                    <br>MADE BY PIYUSH SONI
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Countdown Timer
+        function updateCountdown() {
+            const janmashtamiDate = new Date('2025-08-18T00:00:00');
+            const now = new Date();
+            const difference = janmashtamiDate - now;
+            
+            if (difference > 0) {
+                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+                
+                document.getElementById('days').textContent = String(days).padStart(2, '0');
+                document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+                document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+                document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+            } else {
+                document.getElementById('days').textContent = '00';
+                document.getElementById('hours').textContent = '00';
+                document.getElementById('minutes').textContent = '00';
+                document.getElementById('seconds').textContent = '00';
+            }
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // Smooth scrolling for navigation
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
