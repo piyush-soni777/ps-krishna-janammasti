@@ -33,4 +33,3 @@ It celebrates the festival of Janmashtami with beautiful design, animations, dev
 
 ---
 
-## 📂 Project Structure
