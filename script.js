@@ -24,7 +24,7 @@
         
         setInterval(updateCountdown, 1000);
         updateCountdown();
-        
+        // piyushSoni
         // Smooth scrolling for navigation
         document.querySelectorAll('nav a').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
